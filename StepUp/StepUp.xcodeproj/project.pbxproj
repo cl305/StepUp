@@ -16,6 +16,7 @@
 		63EF3DEA1D429F2400CCF847 /* StepUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DE91D429F2400CCF847 /* StepUpTests.swift */; };
 		63EF3DF51D429F2400CCF847 /* StepUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DF41D429F2400CCF847 /* StepUpUITests.swift */; };
 		63F4BE2D1D50FB3900627899 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F4BE2C1D50FB3900627899 /* SWRevealViewController.m */; };
+		63F4BE311D512BB900627899 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4BE301D512BB900627899 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		63F4BE2A1D50FB3900627899 /* StepUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StepUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		63F4BE2B1D50FB3900627899 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		63F4BE2C1D50FB3900627899 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		63F4BE301D512BB900627899 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				63F4BE291D50FA8000627899 /* SWRevealViewController */,
 				63EF3DD11D429F2400CCF847 /* AppDelegate.swift */,
 				63EF3DD31D429F2400CCF847 /* ViewController.swift */,
+				63F4BE301D512BB900627899 /* MainViewController.swift */,
 				63EF3DD51D429F2400CCF847 /* Main.storyboard */,
 				63EF3DDB1D429F2400CCF847 /* Assets.xcassets */,
 				63EF3DDD1D429F2400CCF847 /* LaunchScreen.storyboard */,
@@ -279,6 +282,7 @@
 				63EF3DD21D429F2400CCF847 /* AppDelegate.swift in Sources */,
 				63EF3DDA1D429F2400CCF847 /* StepUp.xcdatamodeld in Sources */,
 				63F4BE2D1D50FB3900627899 /* SWRevealViewController.m in Sources */,
+				63F4BE311D512BB900627899 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

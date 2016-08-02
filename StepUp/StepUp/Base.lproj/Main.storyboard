@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,11 +26,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="237" y="454"/>
         </scene>
-        <!--Menu Controller-->
+        <!--Table View Controller-->
         <scene sceneID="DYU-mS-aMP">
             <objects>
-                <tableViewController id="9Zk-WM-g8s" customClass="MenuController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="9Zk-WM-g8s" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="scU-Mh-ysi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,15 +90,52 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V93-nu-1CE" kind="relationship" relationship="rootViewController" id="ehp-U4-Gkn"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBL-BD-BbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1675" y="16"/>
+            <point key="canvasLocation" x="1799" y="-369"/>
         </scene>
-        <!--Menu Controller-->
+        <!--Main View Controller-->
+        <scene sceneID="eGJ-On-ake">
+            <objects>
+                <viewController id="V93-nu-1CE" customClass="MainViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ITN-TW-Bpf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Myn-Np-2dZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iAq-Y2-dN7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKj-7j-Npr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="bEO-Zg-5qg">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="ggD-35-aCF"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="URD-DK-tkS">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="MNa-o6-0N4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="MNa-o6-0N4" id="UgV-t3-ThY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKR-GK-UTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2521" y="-358"/>
+        </scene>
+        <!--Table View Controller-->
         <scene sceneID="DW6-f9-JeY">
             <objects>
-                <tableViewController id="Y84-V3-gOK" customClass="MenuController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Y84-V3-gOK" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="p6c-hw-FWc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +152,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StepUpHeader" translatesAutoresizingMaskIntoConstraints="NO" id="PNr-Ym-vTo">
-                                                    <rect key="frame" x="0.0" y="-4" width="600" height="52"/>
+                                                    <rect key="frame" x="0.0" y="-4" width="295" height="52"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -140,6 +178,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98479340255512804" green="0.988595051916346" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.96932544335269155" green="0.97306738094383793" blue="0.98429319371727753" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="j6l-aq-J0B" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="PY0-C5-z3e"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cZE-Ee-saN">
                                         <rect key="frame" x="0.0" y="88" width="600" height="44"/>
@@ -278,7 +319,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yI-Ov-bjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="649"/>
+            <point key="canvasLocation" x="1090" y="673"/>
         </scene>
     </scenes>
     <resources>
@@ -291,4 +332,7 @@
         <image name="StatisticsIcon" width="72" height="60"/>
         <image name="StepUpHeader" width="606" height="150"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PY0-C5-z3e"/>
+    </inferredMetricsTieBreakers>
 </document>
