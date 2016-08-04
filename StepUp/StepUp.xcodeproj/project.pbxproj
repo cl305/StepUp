@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5C415E5C3E0AF71DAF1C37 /* Pods_StepUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0489C862DC467BDD26231D48 /* Pods_StepUp.framework */; };
 		63EF3DD21D429F2400CCF847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD11D429F2400CCF847 /* AppDelegate.swift */; };
 		63EF3DD41D429F2400CCF847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD31D429F2400CCF847 /* ViewController.swift */; };
 		63EF3DD71D429F2400CCF847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EF3DD51D429F2400CCF847 /* Main.storyboard */; };
@@ -16,7 +17,8 @@
 		63EF3DEA1D429F2400CCF847 /* StepUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DE91D429F2400CCF847 /* StepUpTests.swift */; };
 		63EF3DF51D429F2400CCF847 /* StepUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DF41D429F2400CCF847 /* StepUpUITests.swift */; };
 		63F4BE2D1D50FB3900627899 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F4BE2C1D50FB3900627899 /* SWRevealViewController.m */; };
-		63F4BE311D512BB900627899 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4BE301D512BB900627899 /* MainViewController.swift */; };
+		63F4BE331D52467500627899 /* MMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4BE321D52467500627899 /* MMViewController.swift */; };
+		63F4BE351D524EB700627899 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4BE341D524EB700627899 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0489C862DC467BDD26231D48 /* Pods_StepUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StepUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C5559B6026F0DDCC027FEA /* Pods-StepUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StepUp/Pods-StepUp.debug.xcconfig"; sourceTree = "<group>"; };
 		63EF3DCE1D429F2400CCF847 /* StepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EF3DD11D429F2400CCF847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63EF3DD31D429F2400CCF847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +58,9 @@
 		63F4BE2A1D50FB3900627899 /* StepUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StepUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		63F4BE2B1D50FB3900627899 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		63F4BE2C1D50FB3900627899 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		63F4BE301D512BB900627899 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		63F4BE321D52467500627899 /* MMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMViewController.swift; sourceTree = "<group>"; };
+		63F4BE341D524EB700627899 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		E81880BC3368F11A2457C476 /* Pods-StepUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StepUp/Pods-StepUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5C415E5C3E0AF71DAF1C37 /* Pods_StepUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +96,8 @@
 				63EF3DE81D429F2400CCF847 /* StepUpTests */,
 				63EF3DF31D429F2400CCF847 /* StepUpUITests */,
 				63EF3DCF1D429F2400CCF847 /* Products */,
+				E248D31D532BBA4224447E9A /* Pods */,
+				C25CD321FDB7883E53661325 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,8 +117,9 @@
 				63F4BE291D50FA8000627899 /* SWRevealViewController */,
 				63EF3DD11D429F2400CCF847 /* AppDelegate.swift */,
 				63EF3DD31D429F2400CCF847 /* ViewController.swift */,
-				63F4BE301D512BB900627899 /* MainViewController.swift */,
+				63F4BE341D524EB700627899 /* DashboardViewController.swift */,
 				63EF3DD51D429F2400CCF847 /* Main.storyboard */,
+				63F4BE321D52467500627899 /* MMViewController.swift */,
 				63EF3DDB1D429F2400CCF847 /* Assets.xcassets */,
 				63EF3DDD1D429F2400CCF847 /* LaunchScreen.storyboard */,
 				63EF3DE01D429F2400CCF847 /* Info.plist */,
@@ -147,6 +157,23 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		C25CD321FDB7883E53661325 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0489C862DC467BDD26231D48 /* Pods_StepUp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E248D31D532BBA4224447E9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09C5559B6026F0DDCC027FEA /* Pods-StepUp.debug.xcconfig */,
+				E81880BC3368F11A2457C476 /* Pods-StepUp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63EF3DF91D429F2400CCF847 /* Build configuration list for PBXNativeTarget "StepUp" */;
 			buildPhases = (
+				96117521266A9590F4B4C184 /* [CP] Check Pods Manifest.lock */,
 				63EF3DCA1D429F2400CCF847 /* Sources */,
 				63EF3DCB1D429F2400CCF847 /* Frameworks */,
 				63EF3DCC1D429F2400CCF847 /* Resources */,
+				54DF0B5AFD4F2A30E502D362 /* [CP] Embed Pods Frameworks */,
+				289C6EFE8C8926012CB8B22D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,16 +303,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		289C6EFE8C8926012CB8B22D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StepUp/Pods-StepUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54DF0B5AFD4F2A30E502D362 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StepUp/Pods-StepUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96117521266A9590F4B4C184 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63EF3DCA1D429F2400CCF847 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F4BE331D52467500627899 /* MMViewController.swift in Sources */,
+				63F4BE351D524EB700627899 /* DashboardViewController.swift in Sources */,
 				63EF3DD41D429F2400CCF847 /* ViewController.swift in Sources */,
 				63EF3DD21D429F2400CCF847 /* AppDelegate.swift in Sources */,
 				63EF3DDA1D429F2400CCF847 /* StepUp.xcdatamodeld in Sources */,
 				63F4BE2D1D50FB3900627899 /* SWRevealViewController.m in Sources */,
-				63F4BE311D512BB900627899 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +501,7 @@
 		};
 		63EF3DFA1D429F2400CCF847 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09C5559B6026F0DDCC027FEA /* Pods-StepUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -436,6 +516,7 @@
 		};
 		63EF3DFB1D429F2400CCF847 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E81880BC3368F11A2457C476 /* Pods-StepUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -1,0 +1,5 @@
+target 'StepUp' do
+	pod 'KDCircularProgress'
+	use_frameworks!
+end
+

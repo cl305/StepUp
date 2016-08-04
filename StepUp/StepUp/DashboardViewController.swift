@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  DashboardViewController.swift
 //  StepUp
 //
 //  Created by Cody Li on 8/2/16.
@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-class MainViewController: UITableViewController {
-    
+class DashboardViewController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
