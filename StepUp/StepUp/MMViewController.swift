@@ -29,11 +29,11 @@ class MMViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+        return "Messages"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -42,6 +42,9 @@ class MMViewController: UITableViewController {
         cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
         
         return cell
+    }
+    @IBAction func addMessage(sender: AnyObject) {
+        performSegueWithIdentifier("AddItemViewController", sender: self)
     }
    
 }

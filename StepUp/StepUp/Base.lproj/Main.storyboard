@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -295,16 +296,68 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Messages" id="lIp-wR-cQg">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="YEs-3I-hag"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add Message" id="TNO-hC-Ajl"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Message" id="TNO-hC-Ajl">
+                            <connections>
+                                <action selector="addMessage:" destination="oC9-bv-dVZ" id="6P2-45-7zH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="TNO-hC-Ajl" id="2jB-Py-ySK"/>
                         <outlet property="menuButton" destination="YEs-3I-hag" id="SSG-E5-HNk"/>
+                        <segue destination="4Vc-1n-JYv" kind="presentation" identifier="AddItemViewController" id="QdA-Tj-UUX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMa-F5-Kb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2659" y="274"/>
+        </scene>
+        <!--Add/Edit Message-->
+        <scene sceneID="6uA-RE-DZE">
+            <objects>
+                <viewController id="4w0-gi-ZAp" customClass="AddMessageViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fs8-wh-rRo"/>
+                        <viewControllerLayoutGuide type="bottom" id="6th-Td-FfV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6T9-as-noD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap here to enter your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJi-cZ-ITM">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KJi-cZ-ITM" firstAttribute="top" secondItem="fs8-wh-rRo" secondAttribute="bottom" constant="8" symbolic="YES" id="Ojb-7m-sMG"/>
+                            <constraint firstItem="KJi-cZ-ITM" firstAttribute="leading" secondItem="6T9-as-noD" secondAttribute="leadingMargin" id="ul2-29-Uyh"/>
+                            <constraint firstItem="KJi-cZ-ITM" firstAttribute="trailing" secondItem="6T9-as-noD" secondAttribute="trailingMargin" id="zcY-Yr-96S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add/Edit Message" id="fPQ-wD-8L7">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="doc-vZ-1Qz">
+                            <connections>
+                                <action selector="cancel:" destination="4w0-gi-ZAp" id="9ga-cM-jwh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Ntw-J1-DGI">
+                            <connections>
+                                <action selector="addEdit:" destination="4w0-gi-ZAp" id="3oG-1W-s9b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addEditButton" destination="Ntw-J1-DGI" id="4w4-eh-VqI"/>
+                        <outlet property="cancelButton" destination="doc-vZ-1Qz" id="U8n-SW-Wci"/>
+                        <outlet property="messageTextField" destination="KJi-cZ-ITM" id="sdW-vq-ecV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ezt-Xt-Chi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4190" y="274"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VPz-NU-Qzk">
@@ -321,6 +374,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFP-eR-O9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1842" y="274"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fpD-do-gqI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Vc-1n-JYv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XEg-9Y-kwM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4w0-gi-ZAp" kind="relationship" relationship="rootViewController" id="JGe-L1-B0H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVe-aB-bSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3385" y="274"/>
         </scene>
     </scenes>
     <resources>
