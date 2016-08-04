@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 
-class MMViewController: UITableViewController {
+class MMViewController: UITableViewController{
     
     
     @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    
+    var messageArray : NSMutableArray = ["hey", "good"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +32,7 @@ class MMViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return messageArray.count
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -39,12 +42,21 @@ class MMViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageCell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+        cell.textLabel?.text = messageArray[indexPath.row] as! String
         
         return cell
     }
-    @IBAction func addMessage(sender: AnyObject) {
-        performSegueWithIdentifier("AddItemViewController", sender: self)
+    
+    @IBAction func cancel(segue:UIStoryboardSegue) {
+        
     }
+    
+    @IBAction func done(segue: UIStoryboardSegue) {
+        let messageDetailVC = segue.sourceViewController as! AddMessageViewController
+        messageArray.addObject(messageDetailVC.message)
+        print(messageDetailVC.message)
+        self.tableView.reloadData()
+    }
+    
    
 }

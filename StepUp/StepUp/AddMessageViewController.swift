@@ -9,26 +9,26 @@
 import Foundation
 import UIKit
 
+//protocol AddMessageViewControllerDelegate {
+//    func controller(controller: AddMessageViewController, didSaveMessage message: String)
+//}
+
 class AddMessageViewController: UIViewController {
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
-    @IBOutlet weak var addEditButton: UIBarButtonItem!
-    @IBOutlet weak var messageTextField: UITextField!
-    
+    @IBOutlet weak var messageField: UITextView!
+    var message: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "doneSegue" {
+            message = messageField.text
+        }
     }
     
-    @IBAction func addEdit(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    @IBAction func addMessage(sender: AnyObject) {
-    }
-    
-    
 }

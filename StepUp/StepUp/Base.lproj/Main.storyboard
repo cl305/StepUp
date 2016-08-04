@@ -244,7 +244,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Dashboard" id="l4x-go-38G">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="CQ1-VK-tI5"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="CQ1-VK-tI5"/>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="CQ1-VK-tI5" id="4vm-TY-SoN"/>
@@ -295,24 +295,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Messages" id="lIp-wR-cQg">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="YEs-3I-hag"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add Message" id="TNO-hC-Ajl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="YEs-3I-hag"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="TNO-hC-Ajl">
                             <connections>
-                                <action selector="addMessage:" destination="oC9-bv-dVZ" id="6P2-45-7zH"/>
+                                <segue destination="4w0-gi-ZAp" kind="modal" id="XZu-yq-jND"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="TNO-hC-Ajl" id="2jB-Py-ySK"/>
                         <outlet property="menuButton" destination="YEs-3I-hag" id="SSG-E5-HNk"/>
-                        <segue destination="4Vc-1n-JYv" kind="presentation" identifier="AddItemViewController" id="QdA-Tj-UUX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMa-F5-Kb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2659" y="274"/>
         </scene>
-        <!--Add/Edit Message-->
+        <!--Title-->
         <scene sceneID="6uA-RE-DZE">
             <objects>
                 <viewController id="4w0-gi-ZAp" customClass="AddMessageViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,40 +323,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap here to enter your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJi-cZ-ITM">
-                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skd-yZ-rT7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Add/Edit Message" id="Fb8-lj-1pJ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="BfN-vk-Oyo">
+                                            <connections>
+                                                <action selector="cancel:" destination="4w0-gi-ZAp" id="FMO-Ku-95w"/>
+                                                <segue destination="y4N-fr-ha0" kind="unwind" identifier="" unwindAction="cancel:" id="1cF-z7-PoE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QBj-Vu-bWr">
+                                            <connections>
+                                                <segue destination="y4N-fr-ha0" kind="unwind" identifier="doneSegue" unwindAction="done:" id="TBN-rG-V1g"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type message here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xdJ-I4-rbk">
+                                <rect key="frame" x="0.0" y="44" width="560" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KJi-cZ-ITM" firstAttribute="top" secondItem="fs8-wh-rRo" secondAttribute="bottom" constant="8" symbolic="YES" id="Ojb-7m-sMG"/>
-                            <constraint firstItem="KJi-cZ-ITM" firstAttribute="leading" secondItem="6T9-as-noD" secondAttribute="leadingMargin" id="ul2-29-Uyh"/>
-                            <constraint firstItem="KJi-cZ-ITM" firstAttribute="trailing" secondItem="6T9-as-noD" secondAttribute="trailingMargin" id="zcY-Yr-96S"/>
+                            <constraint firstItem="6th-Td-FfV" firstAttribute="top" secondItem="xdJ-I4-rbk" secondAttribute="bottom" constant="316" id="2qg-fJ-OcK"/>
+                            <constraint firstItem="xdJ-I4-rbk" firstAttribute="top" secondItem="skd-yZ-rT7" secondAttribute="bottom" id="AoD-Bl-Huq"/>
+                            <constraint firstItem="skd-yZ-rT7" firstAttribute="leading" secondItem="6T9-as-noD" secondAttribute="leading" id="IkH-h8-7i4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xdJ-I4-rbk" secondAttribute="trailing" constant="20" id="jFX-5M-7uX"/>
+                            <constraint firstItem="skd-yZ-rT7" firstAttribute="top" secondItem="6T9-as-noD" secondAttribute="top" id="oSu-Kp-o9b"/>
+                            <constraint firstItem="skd-yZ-rT7" firstAttribute="leading" secondItem="xdJ-I4-rbk" secondAttribute="leading" id="pFg-1L-Git"/>
+                            <constraint firstAttribute="trailing" secondItem="skd-yZ-rT7" secondAttribute="trailing" id="q8t-Tu-Wpb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add/Edit Message" id="fPQ-wD-8L7">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="doc-vZ-1Qz">
-                            <connections>
-                                <action selector="cancel:" destination="4w0-gi-ZAp" id="9ga-cM-jwh"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="Ntw-J1-DGI">
-                            <connections>
-                                <action selector="addEdit:" destination="4w0-gi-ZAp" id="3oG-1W-s9b"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="Z3m-QG-8g9"/>
                     <connections>
-                        <outlet property="addEditButton" destination="Ntw-J1-DGI" id="4w4-eh-VqI"/>
-                        <outlet property="cancelButton" destination="doc-vZ-1Qz" id="U8n-SW-Wci"/>
-                        <outlet property="messageTextField" destination="KJi-cZ-ITM" id="sdW-vq-ecV"/>
+                        <outlet property="cancelButton" destination="BfN-vk-Oyo" id="uyd-r6-G9F"/>
+                        <outlet property="messageField" destination="xdJ-I4-rbk" id="nFm-Rn-COy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ezt-Xt-Chi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="y4N-fr-ha0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4190" y="274"/>
+            <point key="canvasLocation" x="3368" y="274"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VPz-NU-Qzk">
@@ -374,24 +385,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFP-eR-O9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1842" y="274"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fpD-do-gqI">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Vc-1n-JYv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XEg-9Y-kwM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4w0-gi-ZAp" kind="relationship" relationship="rootViewController" id="JGe-L1-B0H"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LVe-aB-bSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3385" y="274"/>
         </scene>
     </scenes>
     <resources>
