@@ -45,20 +45,23 @@ class MMViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Messages"
+        return ""
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            messageArray.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
     }
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Edit" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
-            print("hey")
-            
-        })
-        
-        return [editAction]
-    }
+//    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+//        let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Edit" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
+//            print("hey")
+//        })
+//        
+//        return [editAction]
+//    }
     
     @IBAction func cancel(segue:UIStoryboardSegue) {
         
@@ -82,8 +85,8 @@ class MMViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "edit" {
-            var path = tableView.indexPathForSelectedRow
-            var detailViewController = segue.destinationViewController as! EditMessageViewController
+            let path = tableView.indexPathForSelectedRow
+            let detailViewController = segue.destinationViewController as! EditMessageViewController
             detailViewController.index = path?.row
             detailViewController.modelArray = messageArray
             
