@@ -55,14 +55,6 @@ class MMViewController: UITableViewController {
         }
     }
     
-//    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-//        let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Edit" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
-//            print("hey")
-//        })
-//        
-//        return [editAction]
-//    }
-    
     @IBAction func cancel(segue:UIStoryboardSegue) {
         
     }

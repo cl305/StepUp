@@ -93,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6313CB4C1D552FB000D79E29 /* Motivational Messages */ = {
+			isa = PBXGroup;
+			children = (
+				6313CB4A1D551EC700D79E29 /* EditMessageViewController.swift */,
+				63F4BE321D52467500627899 /* MMViewController.swift */,
+				631D8FE31D5387B8001376B3 /* AddMessageViewController.swift */,
+			);
+			name = "Motivational Messages";
+			sourceTree = "<group>";
+		};
 		63EF3DC51D429F2400CCF847 = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +133,7 @@
 				63EF3DD31D429F2400CCF847 /* ViewController.swift */,
 				63F4BE341D524EB700627899 /* DashboardViewController.swift */,
 				63EF3DD51D429F2400CCF847 /* Main.storyboard */,
-				6313CB4A1D551EC700D79E29 /* EditMessageViewController.swift */,
-				63F4BE321D52467500627899 /* MMViewController.swift */,
-				631D8FE31D5387B8001376B3 /* AddMessageViewController.swift */,
+				6313CB4C1D552FB000D79E29 /* Motivational Messages */,
 				63EF3DDB1D429F2400CCF847 /* Assets.xcassets */,
 				63EF3DDD1D429F2400CCF847 /* LaunchScreen.storyboard */,
 				63EF3DE01D429F2400CCF847 /* Info.plist */,
