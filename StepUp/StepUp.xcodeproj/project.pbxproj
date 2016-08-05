@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A5C415E5C3E0AF71DAF1C37 /* Pods_StepUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0489C862DC467BDD26231D48 /* Pods_StepUp.framework */; };
+		6313CB4B1D551EC700D79E29 /* EditMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313CB4A1D551EC700D79E29 /* EditMessageViewController.swift */; };
 		631D8FE41D5387B8001376B3 /* AddMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D8FE31D5387B8001376B3 /* AddMessageViewController.swift */; };
 		63EF3DD21D429F2400CCF847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD11D429F2400CCF847 /* AppDelegate.swift */; };
 		63EF3DD41D429F2400CCF847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD31D429F2400CCF847 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		0489C862DC467BDD26231D48 /* Pods_StepUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StepUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C5559B6026F0DDCC027FEA /* Pods-StepUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StepUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StepUp/Pods-StepUp.debug.xcconfig"; sourceTree = "<group>"; };
+		6313CB4A1D551EC700D79E29 /* EditMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMessageViewController.swift; sourceTree = "<group>"; };
 		631D8FE31D5387B8001376B3 /* AddMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
 		63EF3DCE1D429F2400CCF847 /* StepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EF3DD11D429F2400CCF847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				63EF3DD31D429F2400CCF847 /* ViewController.swift */,
 				63F4BE341D524EB700627899 /* DashboardViewController.swift */,
 				63EF3DD51D429F2400CCF847 /* Main.storyboard */,
+				6313CB4A1D551EC700D79E29 /* EditMessageViewController.swift */,
 				63F4BE321D52467500627899 /* MMViewController.swift */,
 				631D8FE31D5387B8001376B3 /* AddMessageViewController.swift */,
 				63EF3DDB1D429F2400CCF847 /* Assets.xcassets */,
@@ -363,6 +366,7 @@
 				63F4BE351D524EB700627899 /* DashboardViewController.swift in Sources */,
 				63EF3DD41D429F2400CCF847 /* ViewController.swift in Sources */,
 				631D8FE41D5387B8001376B3 /* AddMessageViewController.swift in Sources */,
+				6313CB4B1D551EC700D79E29 /* EditMessageViewController.swift in Sources */,
 				63EF3DD21D429F2400CCF847 /* AppDelegate.swift in Sources */,
 				63EF3DDA1D429F2400CCF847 /* StepUp.xcdatamodeld in Sources */,
 				63F4BE2D1D50FB3900627899 /* SWRevealViewController.m in Sources */,

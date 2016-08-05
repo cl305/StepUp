@@ -16,7 +16,7 @@ class MMViewController: UITableViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     
-    var messageArray : NSMutableArray = ["hey", "good"]
+    var messageArray : [String] = ["hey", "good"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +39,7 @@ class MMViewController: UITableViewController {
         // 3
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageCell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = messageArray[indexPath.row] as! String
+        cell.textLabel?.text = messageArray[indexPath.row]
         
         return cell
     }
@@ -52,36 +52,12 @@ class MMViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        // 1
-        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
-            // 2
-            let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .ActionSheet)
+        let editAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Edit" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
+            print("hey")
             
-            let twitterAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: nil)
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
-            
-            shareMenu.addAction(twitterAction)
-            shareMenu.addAction(cancelAction)
-            
-            
-            self.presentViewController(shareMenu, animated: true, completion: nil)
         })
-        // 3
-        let rateAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Rate" , handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
-            // 4
-            let rateMenu = UIAlertController(title: nil, message: "Rate this App", preferredStyle: .ActionSheet)
-            
-            let appRateAction = UIAlertAction(title: "Rate", style: UIAlertActionStyle.Default, handler: nil)
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
-            
-            rateMenu.addAction(appRateAction)
-            rateMenu.addAction(cancelAction)
-            
-            
-            self.presentViewController(rateMenu, animated: true, completion: nil)
-        })
-        // 5
-        return [shareAction,rateAction]
+        
+        return [editAction]
     }
     
     @IBAction func cancel(segue:UIStoryboardSegue) {
@@ -90,10 +66,28 @@ class MMViewController: UITableViewController {
     
     @IBAction func done(segue: UIStoryboardSegue) {
         let messageDetailVC = segue.sourceViewController as! AddMessageViewController
-        messageArray.addObject(messageDetailVC.message)
+        messageArray.append(messageDetailVC.message)
         print(messageDetailVC.message)
         self.tableView.reloadData()
     }
     
+    @IBAction func saveToMainViewcontroller (segue: UIStoryboardSegue) {
+        let detailViewController = segue.sourceViewController as! EditMessageViewController
+        let index = detailViewController.index
+        let editString = detailViewController.editedMessage
+        messageArray[index!] = editString!
+        self.tableView.reloadData()
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "edit" {
+            var path = tableView.indexPathForSelectedRow
+            var detailViewController = segue.destinationViewController as! EditMessageViewController
+            detailViewController.index = path?.row
+            detailViewController.modelArray = messageArray
+            
+        }
+    }
    
 }

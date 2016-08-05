@@ -286,6 +286,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="XMV-yf-hR9" kind="show" identifier="edit" id="o2v-qc-D3S"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -312,6 +315,56 @@
             <point key="canvasLocation" x="2659" y="274"/>
         </scene>
         <!--Title-->
+        <scene sceneID="pB2-qi-Aog">
+            <objects>
+                <tableViewController id="XMV-yf-hR9" customClass="EditMessageViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="llV-O4-ebL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Edit message" id="rPn-iA-ACj">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qs3-3e-Psv">
+                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qs3-3e-Psv" id="kbO-MG-8tP">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ui-GD-gXo">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="XMV-yf-hR9" id="TTP-4X-hfH"/>
+                            <outlet property="delegate" destination="XMV-yf-hR9" id="QSb-5K-dJh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="97M-I7-C23">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Qye-rK-CIO">
+                            <connections>
+                                <segue destination="Dhf-39-lJh" kind="unwind" identifier="save" unwindAction="saveToMainViewcontroller:" id="OMq-jF-iYr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editMessageField" destination="6Ui-GD-gXo" id="3N4-xm-7wI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUF-v2-99P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Dhf-39-lJh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2659" y="977"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="6uA-RE-DZE">
             <objects>
                 <viewController id="4w0-gi-ZAp" customClass="AddMessageViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -326,7 +379,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skd-yZ-rT7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Add/Edit Message" id="Fb8-lj-1pJ">
+                                    <navigationItem title="Add Message" id="Fb8-lj-1pJ">
                                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="BfN-vk-Oyo">
                                             <connections>
                                                 <action selector="cancel:" destination="4w0-gi-ZAp" id="FMO-Ku-95w"/>
