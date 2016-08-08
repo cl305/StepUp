@@ -98,6 +98,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.97963741615431588" green="0.98341916159217668" blue="0.99476439790575921" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.96932544335269155" green="0.97306738094383793" blue="0.98429319371727753" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="M9e-7E-eXc" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="6TT-mk-ZSx"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="d3I-yx-JmW">
                                         <rect key="frame" x="0.0" y="132" width="600" height="44"/>
@@ -364,6 +367,46 @@
             </objects>
             <point key="canvasLocation" x="2659" y="977"/>
         </scene>
+        <!--August 8, 2016-->
+        <scene sceneID="OAL-qL-cPV">
+            <objects>
+                <viewController id="9Ak-b9-LaJ" customClass="TodayGoalsViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v7A-BQ-1iW"/>
+                        <viewControllerLayoutGuide type="bottom" id="XnE-89-zad"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Fx-mL-BbI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="August 8, 2016" id="EVa-av-Qsq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="hYG-rj-NxM"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="hYG-rj-NxM" id="ca6-em-17C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKx-fF-Gda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2659" y="1741"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sXp-Zx-Hsp">
+            <objects>
+                <navigationController id="M9e-7E-eXc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tqd-o9-s2V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Ak-b9-LaJ" kind="relationship" relationship="rootViewController" id="HSe-e4-Gf7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ze-Ct-a2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840" y="1741"/>
+        </scene>
         <!--Title-->
         <scene sceneID="6uA-RE-DZE">
             <objects>
@@ -451,6 +494,6 @@
         <image name="StepUpHeader" width="606" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NFe-8J-qTb"/>
+        <segue reference="dAE-rc-qAb"/>
     </inferredMetricsTieBreakers>
 </document>
