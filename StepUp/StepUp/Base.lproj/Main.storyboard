@@ -325,7 +325,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="llV-O4-ebL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Edit message" id="rPn-iA-ACj">
                                 <cells>
@@ -383,19 +383,19 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEY-H3-Sai" customClass="KDCircularProgress" customModule="StepUp" customModuleProvider="target">
                                 <rect key="frame" x="128" y="64" width="344" height="351"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STEPS TODAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO5-oT-dvO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STEPS TODAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO5-oT-dvO">
                                         <rect key="frame" x="125" y="188" width="95" height="36"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-UltraLight" family="Avenir Next Condensed" pointSize="22"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.30366492146596857" green="0.30366492146596857" blue="0.30366492146596857" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10:10 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-b4-Mfb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10:10 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-b4-Mfb">
                                         <rect key="frame" x="138" y="102" width="68" height="24"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4,523" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPc-m4-UXc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4,523" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPc-m4-UXc">
                                         <rect key="frame" x="111" y="134" width="123" height="46"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="51"/>
                                         <color key="textColor" red="0.0" green="0.4839373911321081" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -405,14 +405,17 @@
                                         <rect key="frame" x="108" y="222" width="129" height="39"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="21"/>
                                         <state key="normal" title="Upload a video"/>
+                                        <connections>
+                                            <action selector="uploadVideo:" destination="9Ak-b9-LaJ" eventType="touchUpInside" id="u0I-yu-Yp3"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10,000 Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-bw-EcK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10,000 Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-bw-EcK">
                                         <rect key="frame" x="129" y="16" width="87" height="21"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.4839373911" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDc-mA-6eG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDc-mA-6eG">
                                         <rect key="frame" x="138" y="0.0" width="35" height="21"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.4839373911" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -444,18 +447,138 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdN-fg-7eC">
+                                <rect key="frame" x="0.0" y="494" width="300" height="106"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IF GOAL REACHED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQn-do-elH">
+                                        <rect key="frame" x="81" y="55" width="138" height="31"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+$1.00 for wearing watch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7e-0I-B0z">
+                                        <rect key="frame" x="29" y="75" width="243" height="31"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                        <color key="textColor" red="0.03043799258" green="0.42146596860000002" blue="0.12812326539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$5.40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-pP-2BT">
+                                        <rect key="frame" x="65" y="-9" width="171" height="70"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="63"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.55686274509803924" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yv-vB-BCF">
+                                <rect key="frame" x="300" y="389" width="300" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VIDEOS UPLOADED TODAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezt-ha-9so">
+                                        <rect key="frame" x="49" y="58" width="202" height="31"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 / 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdI-VB-d5x">
+                                        <rect key="frame" x="93" y="8" width="114" height="52"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="60"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="($2.80 for next abstinent video)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAM-Xe-rmc">
+                                        <rect key="frame" x="29" y="79" width="243" height="31"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                        <color key="textColor" red="0.030437992581246683" green="0.42146596858638741" blue="0.12812326543386321" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.38039215686274508" green="0.55686274509803924" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMh-42-IXT">
+                                <rect key="frame" x="300" y="494" width="300" height="106"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$125" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkQ-yW-A2t">
+                                        <rect key="frame" x="76" y="-5" width="143" height="72"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="63"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL EARNED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vta-jn-edp">
+                                        <rect key="frame" x="81" y="54" width="138" height="31"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="abstinence: $100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ac-lJ-u4C">
+                                        <rect key="frame" x="81" y="75" width="148" height="17"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                        <color key="textColor" red="0.03043799258" green="0.42146596860000002" blue="0.12812326539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="exercise: $25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kN-EP-FSO">
+                                        <rect key="frame" x="81" y="89" width="148" height="17"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="12"/>
+                                        <color key="textColor" red="0.03043799258" green="0.42146596860000002" blue="0.12812326539999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3803921569" green="0.5568627451" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrD-jS-mv0">
+                                <rect key="frame" x="0.0" y="389" width="300" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3:12:20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brv-E7-e2x">
+                                        <rect key="frame" x="55" y="-1" width="191" height="69"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="63"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIME MOVING TODAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rte-K9-U4g">
+                                        <rect key="frame" x="65" y="64" width="170" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3803921569" green="0.5568627451" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.96078431372549022" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mEY-H3-Sai" firstAttribute="centerX" secondItem="2Fx-mL-BbI" secondAttribute="centerX" id="3Ks-Ng-YSP"/>
-                            <constraint firstItem="mEY-H3-Sai" firstAttribute="centerY" secondItem="2Fx-mL-BbI" secondAttribute="centerY" id="ZqB-cV-HtG"/>
+                            <constraint firstItem="qrD-jS-mv0" firstAttribute="bottom" secondItem="4Yv-vB-BCF" secondAttribute="bottom" id="3iN-Tj-BJr"/>
+                            <constraint firstItem="qrD-jS-mv0" firstAttribute="top" secondItem="v7A-BQ-1iW" secondAttribute="bottom" constant="325" id="A1F-Jl-tTt"/>
+                            <constraint firstItem="4Yv-vB-BCF" firstAttribute="leading" secondItem="qrD-jS-mv0" secondAttribute="trailing" id="EQs-tJ-k6r"/>
+                            <constraint firstAttribute="trailing" secondItem="4Yv-vB-BCF" secondAttribute="trailing" id="Eug-qQ-QGX"/>
+                            <constraint firstItem="qrD-jS-mv0" firstAttribute="leading" secondItem="GdN-fg-7eC" secondAttribute="leading" id="FCB-mL-ljE"/>
+                            <constraint firstItem="GdN-fg-7eC" firstAttribute="bottom" secondItem="XnE-89-zad" secondAttribute="top" id="FzC-pQ-3XL"/>
+                            <constraint firstItem="qrD-jS-mv0" firstAttribute="leading" secondItem="2Fx-mL-BbI" secondAttribute="leading" id="Ihb-fs-vn3"/>
+                            <constraint firstItem="VMh-42-IXT" firstAttribute="bottom" secondItem="XnE-89-zad" secondAttribute="top" id="Jdh-JY-Tjh"/>
+                            <constraint firstItem="4Yv-vB-BCF" firstAttribute="leading" secondItem="VMh-42-IXT" secondAttribute="leading" id="QRg-fX-ph3"/>
+                            <constraint firstItem="qrD-jS-mv0" firstAttribute="top" secondItem="4Yv-vB-BCF" secondAttribute="top" id="Svo-Jd-oUt"/>
+                            <constraint firstItem="4Yv-vB-BCF" firstAttribute="trailing" secondItem="VMh-42-IXT" secondAttribute="trailing" id="Wz8-8t-Pf0"/>
+                            <constraint firstItem="mEY-H3-Sai" firstAttribute="centerY" secondItem="2Fx-mL-BbI" secondAttribute="centerY" constant="-60.5" id="ZqB-cV-HtG"/>
+                            <constraint firstItem="qrD-jS-mv0" firstAttribute="trailing" secondItem="GdN-fg-7eC" secondAttribute="trailing" id="dwk-Qo-9d6"/>
+                            <constraint firstItem="GdN-fg-7eC" firstAttribute="top" secondItem="qrD-jS-mv0" secondAttribute="bottom" id="hto-Fy-cYz"/>
+                            <constraint firstItem="GdN-fg-7eC" firstAttribute="top" secondItem="VMh-42-IXT" secondAttribute="top" id="k5a-1T-oC3"/>
+                            <constraint firstItem="GdN-fg-7eC" firstAttribute="top" secondItem="2Fx-mL-BbI" secondAttribute="top" constant="494" id="qyq-xz-IT1"/>
+                            <constraint firstItem="4Yv-vB-BCF" firstAttribute="leading" secondItem="2Fx-mL-BbI" secondAttribute="leading" constant="300" id="wHZ-XS-1w8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Today's Goals" id="EVa-av-Qsq" propertyAccessControl="none">
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="hYG-rj-NxM"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="abstinenceEarned" destination="2Ac-lJ-u4C" id="rGX-eI-hGZ"/>
+                        <outlet property="abstinentPayoutCount" destination="xAM-Xe-rmc" id="qno-db-Hca"/>
+                        <outlet property="currentActivityTime" destination="brv-E7-e2x" id="5pg-Z9-8LZ"/>
+                        <outlet property="currentSteps" destination="DPc-m4-UXc" id="aZS-jA-TIW"/>
+                        <outlet property="currentTime" destination="Dsn-b4-Mfb" id="WUz-Zs-3u1"/>
+                        <outlet property="currentUploadCount" destination="TdI-VB-d5x" id="hVL-Gu-9q7"/>
+                        <outlet property="exerciseEarned" destination="3kN-EP-FSO" id="NHA-q8-AoK"/>
+                        <outlet property="goalPayout" destination="oeI-pP-2BT" id="hht-gx-wqk"/>
                         <outlet property="menuButton" destination="hYG-rj-NxM" id="ca6-em-17C"/>
+                        <outlet property="payoutIfWearingWatch" destination="h7e-0I-B0z" id="0rw-HR-NSa"/>
+                        <outlet property="stepsToGoal" destination="NCK-bw-EcK" id="njB-Ph-Nxz"/>
+                        <outlet property="totalEarned" destination="GkQ-yW-A2t" id="KkG-Ff-Apt"/>
+                        <outlet property="uploadVideoButton" destination="bt5-TO-hCg" id="2Vp-Yb-nio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKx-fF-Gda" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -510,12 +633,12 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type message here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xdJ-I4-rbk">
                                 <rect key="frame" x="0.0" y="44" width="560" height="240"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6th-Td-FfV" firstAttribute="top" secondItem="xdJ-I4-rbk" secondAttribute="bottom" constant="316" id="2qg-fJ-OcK"/>
                             <constraint firstItem="xdJ-I4-rbk" firstAttribute="top" secondItem="skd-yZ-rT7" secondAttribute="bottom" id="AoD-Bl-Huq"/>

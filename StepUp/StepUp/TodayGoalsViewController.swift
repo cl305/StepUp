@@ -12,7 +12,30 @@ import KDCircularProgress
 
 class TodayGoalsViewController: UIViewController {
     
+    //Progress ring section
     @IBOutlet var progressCircle: KDCircularProgress!
+    @IBOutlet var stepsToGoal: UILabel! //Default set to 10000
+    @IBOutlet var currentTime: UILabel!
+    @IBOutlet var currentSteps: UILabel!
+    @IBOutlet var uploadVideoButton: UIButton!
+    
+    //Top left
+    @IBOutlet var currentActivityTime: UILabel!
+    
+    //Top right
+    @IBOutlet var currentUploadCount: UILabel!
+    @IBOutlet var abstinentPayoutCount: UILabel!
+    
+    //Bottom left
+    @IBOutlet var goalPayout: UILabel!
+    @IBOutlet var payoutIfWearingWatch: UILabel!
+    
+    //Bottom right
+    @IBOutlet var totalEarned: UILabel!
+    @IBOutlet var abstinenceEarned: UILabel!
+    @IBOutlet var exerciseEarned: UILabel!
+    
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,4 +46,9 @@ class TodayGoalsViewController: UIViewController {
         }
 
     }
+    
+    @IBAction func uploadVideo(sender: AnyObject) {
+        //TODO: Implement video uploading functionality.
+    }
+    
 }
