@@ -20,5 +20,7 @@ class DashboardViewController: UITableViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        navigationController?.navigationBar.barTintColor = UIColor.lightGrayColor()
     }
 }

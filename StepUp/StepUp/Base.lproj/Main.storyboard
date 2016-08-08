@@ -280,7 +280,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="r9k-0M-Gnv" customClass="MM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81960784313725488" green="0.95294117647058818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="JFR-W2-hyz">
                                 <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
@@ -289,6 +289,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.95294117647058818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="XMV-yf-hR9" kind="show" identifier="edit" id="o2v-qc-D3S"/>
                                 </connections>
@@ -367,7 +368,7 @@
             </objects>
             <point key="canvasLocation" x="2659" y="977"/>
         </scene>
-        <!--August 8, 2016-->
+        <!--Today's Goals-->
         <scene sceneID="OAL-qL-cPV">
             <objects>
                 <viewController id="9Ak-b9-LaJ" customClass="TodayGoalsViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -378,9 +379,79 @@
                     <view key="view" contentMode="scaleToFill" id="2Fx-mL-BbI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEY-H3-Sai" customClass="KDCircularProgress" customModule="StepUp" customModuleProvider="target">
+                                <rect key="frame" x="128" y="64" width="344" height="351"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STEPS TODAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO5-oT-dvO">
+                                        <rect key="frame" x="125" y="188" width="95" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-UltraLight" family="Avenir Next Condensed" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10:10 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-b4-Mfb">
+                                        <rect key="frame" x="138" y="102" width="68" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4,523" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPc-m4-UXc">
+                                        <rect key="frame" x="111" y="134" width="123" height="46"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="51"/>
+                                        <color key="textColor" red="0.0" green="0.4839373911321081" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.051751324350000003" green="0.02339778885" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt5-TO-hCg">
+                                        <rect key="frame" x="108" y="222" width="129" height="39"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="21"/>
+                                        <state key="normal" title="Upload a video"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10,000 Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-bw-EcK">
+                                        <rect key="frame" x="129" y="16" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.4839373911" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDc-mA-6eG">
+                                        <rect key="frame" x="138" y="0.0" width="35" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.4839373911" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StepGoalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8AB-Md-fho">
+                                        <rect key="frame" x="173" y="2" width="18" height="18"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-90"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.57102976750000001" green="0.57323414350000002" blue="0.57984727150000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor1">
+                                        <color key="value" red="0.051751324350000003" green="0.02339778885" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor2">
+                                        <color key="value" red="0.2156431731" green="0.62516703009999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="IBColor3">
+                                        <color key="value" red="0.1939068897" green="1" blue="0.87625091610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.96078431372549022" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mEY-H3-Sai" firstAttribute="centerX" secondItem="2Fx-mL-BbI" secondAttribute="centerX" id="3Ks-Ng-YSP"/>
+                            <constraint firstItem="mEY-H3-Sai" firstAttribute="centerY" secondItem="2Fx-mL-BbI" secondAttribute="centerY" id="ZqB-cV-HtG"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="August 8, 2016" id="EVa-av-Qsq">
+                    <navigationItem key="navigationItem" title="Today's Goals" id="EVa-av-Qsq" propertyAccessControl="none">
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="hYG-rj-NxM"/>
                     </navigationItem>
                     <connections>
@@ -491,6 +562,7 @@
         <image name="MessagesIcon" width="66" height="66"/>
         <image name="RecordIcon" width="68" height="70"/>
         <image name="StatisticsIcon" width="72" height="60"/>
+        <image name="StepGoalIcon" width="204" height="204"/>
         <image name="StepUpHeader" width="606" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import KDCircularProgress
 
 class TodayGoalsViewController: UIViewController {
     
+    @IBOutlet var progressCircle: KDCircularProgress!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
