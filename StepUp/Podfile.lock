@@ -1,12 +1,15 @@
 PODS:
+  - CVCalendar (1.2.9)
   - KDCircularProgress (1.4.0)
 
 DEPENDENCIES:
+  - CVCalendar (~> 1.2.9)
   - KDCircularProgress
 
 SPEC CHECKSUMS:
+  CVCalendar: 0799256e0bc3b43e83b7e86c0729ce9ff0624cb6
   KDCircularProgress: f5770bbd83da909bf6cd96c2dea0b8bae45ec774
 
-PODFILE CHECKSUM: a8b13155b5d539906064ebb2cccac81e5a8f759b
+PODFILE CHECKSUM: 956c8d606652cc07768067af01254cb0dec9ab44
 
 COCOAPODS: 1.0.1
