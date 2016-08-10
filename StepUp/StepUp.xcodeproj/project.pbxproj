@@ -12,6 +12,7 @@
 		6313CB4E1D581A5300D79E29 /* TodayGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313CB4D1D581A5300D79E29 /* TodayGoalsViewController.swift */; };
 		6313CB501D58D30800D79E29 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313CB4F1D58D30800D79E29 /* KDCircularProgress.swift */; };
 		631D8FE41D5387B8001376B3 /* AddMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D8FE31D5387B8001376B3 /* AddMessageViewController.swift */; };
+		634B5A691D5A4F9E001A5813 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B5A681D5A4F9E001A5813 /* CalendarViewController.swift */; };
 		63EF3DD21D429F2400CCF847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD11D429F2400CCF847 /* AppDelegate.swift */; };
 		63EF3DD41D429F2400CCF847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD31D429F2400CCF847 /* ViewController.swift */; };
 		63EF3DD71D429F2400CCF847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EF3DD51D429F2400CCF847 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		6313CB4D1D581A5300D79E29 /* TodayGoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayGoalsViewController.swift; sourceTree = "<group>"; };
 		6313CB4F1D58D30800D79E29 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		631D8FE31D5387B8001376B3 /* AddMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
+		634B5A681D5A4F9E001A5813 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		63EF3DCE1D429F2400CCF847 /* StepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EF3DD11D429F2400CCF847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63EF3DD31D429F2400CCF847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,23 @@
 			name = "Motivational Messages";
 			sourceTree = "<group>";
 		};
+		634B5A6A1D5A5AF4001A5813 /* Today's Goals */ = {
+			isa = PBXGroup;
+			children = (
+				6313CB4F1D58D30800D79E29 /* KDCircularProgress.swift */,
+				6313CB4D1D581A5300D79E29 /* TodayGoalsViewController.swift */,
+			);
+			name = "Today's Goals";
+			sourceTree = "<group>";
+		};
+		634B5A6F1D5BA1D7001A5813 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				634B5A681D5A4F9E001A5813 /* CalendarViewController.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		63EF3DC51D429F2400CCF847 = {
 			isa = PBXGroup;
 			children = (
@@ -137,10 +156,10 @@
 				63EF3DD31D429F2400CCF847 /* ViewController.swift */,
 				63F4BE341D524EB700627899 /* DashboardViewController.swift */,
 				63EF3DD51D429F2400CCF847 /* Main.storyboard */,
-				6313CB4F1D58D30800D79E29 /* KDCircularProgress.swift */,
-				6313CB4D1D581A5300D79E29 /* TodayGoalsViewController.swift */,
+				634B5A6A1D5A5AF4001A5813 /* Today's Goals */,
 				6313CB4C1D552FB000D79E29 /* Motivational Messages */,
 				63EF3DDB1D429F2400CCF847 /* Assets.xcassets */,
+				634B5A6F1D5BA1D7001A5813 /* Calendar */,
 				63EF3DDD1D429F2400CCF847 /* LaunchScreen.storyboard */,
 				63EF3DE01D429F2400CCF847 /* Info.plist */,
 				63EF3DD81D429F2400CCF847 /* StepUp.xcdatamodeld */,
@@ -379,6 +398,7 @@
 				63F4BE331D52467500627899 /* MMViewController.swift in Sources */,
 				63F4BE351D524EB700627899 /* DashboardViewController.swift in Sources */,
 				63EF3DD41D429F2400CCF847 /* ViewController.swift in Sources */,
+				634B5A691D5A4F9E001A5813 /* CalendarViewController.swift in Sources */,
 				631D8FE41D5387B8001376B3 /* AddMessageViewController.swift in Sources */,
 				6313CB4B1D551EC700D79E29 /* EditMessageViewController.swift in Sources */,
 				63EF3DD21D429F2400CCF847 /* AppDelegate.swift in Sources */,
