@@ -49,7 +49,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StepUpHeader" translatesAutoresizingMaskIntoConstraints="NO" id="PNr-Ym-vTo">
-                                                    <rect key="frame" x="0.0" y="-4" width="295" height="52"/>
+                                                    <rect key="frame" x="0.0" y="-7" width="295" height="58"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -228,7 +228,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yI-Ov-bjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="454"/>
+            <point key="canvasLocation" x="1040" y="454"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="qmd-ar-LxL">
@@ -287,7 +287,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="r9k-0M-Gnv" customClass="MM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.22745098039215686" green="0.36078431372549019" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.42352941176470588" green="0.53333333333333333" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="JFR-W2-hyz">
                                 <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
@@ -332,7 +332,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="llV-O4-ebL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.22745098039215686" green="0.36078431372549019" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.45882352941176469" green="0.55686274509803924" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Edit message" id="rPn-iA-ACj">
                                 <cells>
@@ -1004,18 +1004,18 @@
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type message here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xdJ-I4-rbk">
-                                <rect key="frame" x="0.0" y="44" width="560" height="240"/>
-                                <color key="backgroundColor" red="0.7843137255" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="240"/>
+                                <color key="backgroundColor" red="0.60392156862745094" green="0.67843137254901964" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.7843137255" green="0.94117647059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.60392156862745094" green="0.67843137254901964" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6th-Td-FfV" firstAttribute="top" secondItem="xdJ-I4-rbk" secondAttribute="bottom" constant="316" id="2qg-fJ-OcK"/>
                             <constraint firstItem="xdJ-I4-rbk" firstAttribute="top" secondItem="skd-yZ-rT7" secondAttribute="bottom" id="AoD-Bl-Huq"/>
                             <constraint firstItem="skd-yZ-rT7" firstAttribute="leading" secondItem="6T9-as-noD" secondAttribute="leading" id="IkH-h8-7i4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xdJ-I4-rbk" secondAttribute="trailing" constant="20" id="jFX-5M-7uX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xdJ-I4-rbk" secondAttribute="trailing" constant="-20" id="jFX-5M-7uX"/>
                             <constraint firstItem="skd-yZ-rT7" firstAttribute="top" secondItem="6T9-as-noD" secondAttribute="top" id="oSu-Kp-o9b"/>
                             <constraint firstItem="skd-yZ-rT7" firstAttribute="leading" secondItem="xdJ-I4-rbk" secondAttribute="leading" id="pFg-1L-Git"/>
                             <constraint firstAttribute="trailing" secondItem="skd-yZ-rT7" secondAttribute="trailing" id="q8t-Tu-Wpb"/>
@@ -1062,6 +1062,6 @@
         <image name="present-100" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NFe-8J-qTb"/>
+        <segue reference="dAE-rc-qAb"/>
     </inferredMetricsTieBreakers>
 </document>
