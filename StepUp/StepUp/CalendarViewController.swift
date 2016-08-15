@@ -8,30 +8,46 @@
 
 import Foundation
 import UIKit
-import CVCalendar
+import CalendarView
+import SwiftMoment
+
 class CalendarViewController: UIViewController {
     
-    @IBOutlet var menuBar: CVCalendarMenuView!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var calendarView: CVCalendarView!
+    @IBOutlet weak var calendar: CalendarView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
-  
-    var shouldShowDaysOut = true
-    var animationFinished = true
-    
-    var selectedDay:DayView!
+    var date: Moment! {
+        didSet {
+            title = date.format("MMMM d, yyyy")
+        }
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        menuBar.commitMenuViewUpdate()
-        calendarView.commitCalendarViewUpdate()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        date = moment()
+        calendar.delegate = self
         
-        dateLabel.text = CVDate(date: NSDate()).globalDescription
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+}
+
+extension CalendarViewController: CalendarViewDelegate {
+    
+    func calendarDidSelectDate(date: Moment) {
+        self.date = date
+        print("hey")
+    }
+    
+    func calendarDidPageToDate(date: Moment) {
+        self.date = date
     }
 }
 

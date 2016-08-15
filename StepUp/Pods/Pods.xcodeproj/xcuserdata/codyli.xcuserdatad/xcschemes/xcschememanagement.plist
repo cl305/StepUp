@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CVCalendar.xcscheme</key>
+		<key>CalendarView-CalendarView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CalendarView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftMoment.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -47,7 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7FE5576D821A49ADBB85D1AFBDAA51D3</key>
+		<key>41638D9B170F774D9F650F63B192526A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA14B622689766F6B8A4F42FD9DE552F</key>
+		<key>A21DCB995841FE970CCB507D94F822D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A249CF9CC83EF996380469C8249B2013</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA0A91B1405D7B9BA4C2426BD0E2F08</key>
 		<dict>
 			<key>primary</key>
 			<true/>

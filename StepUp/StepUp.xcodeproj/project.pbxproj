@@ -128,6 +128,14 @@
 			name = Calendar;
 			sourceTree = "<group>";
 		};
+		639B75C41D5E4A1C00AA3A60 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				634B5A701D5BAF02001A5813 /* StatisticsViewController.swift */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
 		63EF3DC51D429F2400CCF847 = {
 			isa = PBXGroup;
 			children = (
@@ -158,11 +166,11 @@
 				63EF3DD31D429F2400CCF847 /* ViewController.swift */,
 				63F4BE341D524EB700627899 /* DashboardViewController.swift */,
 				63EF3DD51D429F2400CCF847 /* Main.storyboard */,
-				634B5A701D5BAF02001A5813 /* StatisticsViewController.swift */,
+				639B75C41D5E4A1C00AA3A60 /* Statistics */,
 				634B5A6A1D5A5AF4001A5813 /* Today's Goals */,
 				6313CB4C1D552FB000D79E29 /* Motivational Messages */,
-				63EF3DDB1D429F2400CCF847 /* Assets.xcassets */,
 				634B5A6F1D5BA1D7001A5813 /* Calendar */,
+				63EF3DDB1D429F2400CCF847 /* Assets.xcassets */,
 				63EF3DDD1D429F2400CCF847 /* LaunchScreen.storyboard */,
 				63EF3DE01D429F2400CCF847 /* Info.plist */,
 				63EF3DD81D429F2400CCF847 /* StepUp.xcdatamodeld */,

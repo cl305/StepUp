@@ -1,6 +1,6 @@
 target 'StepUp' do
 	pod 'KDCircularProgress'
-	pod 'CVCalendar'	
+	pod 'CalendarView'	
 	pod 'Charts/Realm'
 	use_frameworks!
 end
