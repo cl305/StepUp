@@ -20,6 +20,8 @@ class AddMessageViewController: UIViewController {
     var message: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AvenirNext-Regular", size: 20)!]
+        messageField.font = UIFont(name: "AvenirNext-Regular", size: 20)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

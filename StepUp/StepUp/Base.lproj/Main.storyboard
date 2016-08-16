@@ -49,7 +49,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StepUpHeader" translatesAutoresizingMaskIntoConstraints="NO" id="PNr-Ym-vTo">
-                                                    <rect key="frame" x="0.0" y="-7" width="295" height="58"/>
+                                                    <rect key="frame" x="0.0" y="-7" width="293" height="58"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -72,6 +72,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98479340255512804" green="0.988595051916346" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.96932544335269155" green="0.97306738094383793" blue="0.98429319371727753" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,6 +89,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GoalsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="IJI-Q5-r8B">
                                                     <rect key="frame" x="18" y="4" width="35" height="35"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Goals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7w-L7-Dhg">
                                                     <rect key="frame" x="61" y="6" width="107" height="31"/>
@@ -1004,15 +1006,22 @@
                                     <barButtonItem systemItem="organize" id="2qh-11-TQd"/>
                                 </items>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuV-Db-ec1" customClass="CalendarView" customModule="CalendarView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="239"/>
+                                <color key="backgroundColor" red="0.6705882352941176" green="0.72156862745098038" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="hTZ-ou-K3F"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-gQ-GHB">
-                                <rect key="frame" x="10" y="311" width="577" height="245"/>
+                                <rect key="frame" x="0.0" y="311" width="600" height="245"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" id="LzX-4Z-R5e">
-                                        <rect key="frame" x="0.0" y="50" width="577" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LzX-4Z-R5e" id="p61-kV-f8W">
-                                            <rect key="frame" x="0.0" y="0.0" width="577" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1021,24 +1030,17 @@
                                     <outlet property="dataSource" destination="t7n-0v-Zm8" id="xSI-sc-OsV"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuV-Db-ec1" customClass="CalendarView" customModule="CalendarView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="239"/>
-                                <color key="backgroundColor" red="0.6705882352941176" green="0.72156862745098038" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="239" id="hTZ-ou-K3F"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.52156862745098043" green="0.59999999999999998" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mcw-Gu-OzQ" firstAttribute="trailing" secondItem="AuV-Db-ec1" secondAttribute="trailing" id="2Ox-PE-cD1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3AV-gQ-GHB" secondAttribute="trailing" constant="-7" id="ApQ-SZ-wXJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3AV-gQ-GHB" secondAttribute="trailing" constant="-20" id="ApQ-SZ-wXJ"/>
                             <constraint firstItem="mcw-Gu-OzQ" firstAttribute="leading" secondItem="AuV-Db-ec1" secondAttribute="leading" id="BNK-ff-Oa4"/>
                             <constraint firstItem="7QW-J0-wc5" firstAttribute="top" secondItem="AuV-Db-ec1" secondAttribute="bottom" constant="-64" id="DAH-6A-veS"/>
                             <constraint firstItem="3AV-gQ-GHB" firstAttribute="bottom" secondItem="mcw-Gu-OzQ" secondAttribute="top" id="I5B-sO-NMX"/>
                             <constraint firstItem="AuV-Db-ec1" firstAttribute="top" secondItem="PgD-Cb-oQf" secondAttribute="bottom" id="KGc-Vc-C8g"/>
                             <constraint firstItem="3AV-gQ-GHB" firstAttribute="top" secondItem="AuV-Db-ec1" secondAttribute="bottom" constant="8" symbolic="YES" id="W0e-Z5-4lp"/>
-                            <constraint firstItem="3AV-gQ-GHB" firstAttribute="leading" secondItem="2Vd-JC-Vpf" secondAttribute="leadingMargin" constant="-10" id="YMy-5Q-3y0"/>
+                            <constraint firstItem="3AV-gQ-GHB" firstAttribute="leading" secondItem="2Vd-JC-Vpf" secondAttribute="leadingMargin" constant="-20" id="YMy-5Q-3y0"/>
                             <constraint firstItem="AuV-Db-ec1" firstAttribute="leading" secondItem="2Vd-JC-Vpf" secondAttribute="leading" id="aHX-58-1ue"/>
                             <constraint firstAttribute="trailing" secondItem="AuV-Db-ec1" secondAttribute="trailing" id="hgy-zT-jh8"/>
                             <constraint firstItem="mcw-Gu-OzQ" firstAttribute="bottom" secondItem="7QW-J0-wc5" secondAttribute="top" id="hiF-tk-mjZ"/>
@@ -1073,6 +1075,6 @@
         <image name="StepUpHeader" width="606" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NFe-8J-qTb"/>
+        <segue reference="dAE-rc-qAb"/>
     </inferredMetricsTieBreakers>
 </document>

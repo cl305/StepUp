@@ -17,12 +17,13 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var calendarDetailTable: UITableView!
     
-    var dateArray : [String] = ["August 16, 2016", "August 17, 2016"]
+    var dateArray : [String] = ["August 16, 2016", "August 17, 2016", "August 18, 2016", "August 19, 2016", "August 20, 2016", "August 21, 2016"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         date = moment()
         calendar.delegate = self
+        self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AvenirNext-Regular", size: 20)!]
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -76,6 +77,7 @@ extension CalendarViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DateCell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = dateArray[indexPath.row]
+        cell.textLabel!.font = UIFont(name: "AvenirNext-Regular", size: 16)
         return cell
         
     }

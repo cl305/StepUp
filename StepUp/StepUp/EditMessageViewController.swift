@@ -16,6 +16,8 @@ class EditMessageViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AvenirNext-Regular", size: 20)!]
+        editMessageField.font = UIFont(name: "AvenirNext-Regular", size: 20)
         editMessageField.text = modelArray[index!]
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

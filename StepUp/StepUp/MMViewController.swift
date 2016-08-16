@@ -19,6 +19,12 @@ class MMViewController: UITableViewController {
     var messageArray : [String] = ["hey", "good"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AvenirNext-Regular", size: 20)!]
+        
+        if CFloat(UIDevice.currentDevice().systemVersion)! >= 7 {
+            tableView.contentInset = UIEdgeInsetsMake(-40, 0, 0, 0)
+        }
+
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -38,7 +44,7 @@ class MMViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // 3
         let cell = tableView.dequeueReusableCellWithIdentifier("MessageCell", forIndexPath: indexPath) as UITableViewCell
-        
+        cell.textLabel?.font = UIFont(name: "AvenirNext-Regular", size: 16)
         cell.textLabel?.text = messageArray[indexPath.row]
         
         return cell

@@ -14,6 +14,8 @@ class DashboardViewController: UITableViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationController!.navigationBar.barTintColor = UIColor(red:75/255, green:114/255, blue:13/255, alpha:1.0)
+        self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AvenirNext-Regular", size: 20)!]
         // Do any additional setup after loading the view, typically from a nib.
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
