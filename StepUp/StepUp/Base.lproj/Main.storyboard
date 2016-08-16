@@ -1004,20 +1004,41 @@
                                     <barButtonItem systemItem="organize" id="2qh-11-TQd"/>
                                 </items>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-gQ-GHB">
+                                <rect key="frame" x="10" y="311" width="577" height="245"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateCell" id="LzX-4Z-R5e">
+                                        <rect key="frame" x="0.0" y="50" width="577" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LzX-4Z-R5e" id="p61-kV-f8W">
+                                            <rect key="frame" x="0.0" y="0.0" width="577" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="t7n-0v-Zm8" id="xSI-sc-OsV"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuV-Db-ec1" customClass="CalendarView" customModule="CalendarView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="239"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.6705882352941176" green="0.72156862745098038" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="239" id="hTZ-ou-K3F"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.52156862745098043" green="0.59999999999999998" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mcw-Gu-OzQ" firstAttribute="trailing" secondItem="AuV-Db-ec1" secondAttribute="trailing" id="2Ox-PE-cD1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3AV-gQ-GHB" secondAttribute="trailing" constant="-7" id="ApQ-SZ-wXJ"/>
                             <constraint firstItem="mcw-Gu-OzQ" firstAttribute="leading" secondItem="AuV-Db-ec1" secondAttribute="leading" id="BNK-ff-Oa4"/>
                             <constraint firstItem="7QW-J0-wc5" firstAttribute="top" secondItem="AuV-Db-ec1" secondAttribute="bottom" constant="-64" id="DAH-6A-veS"/>
+                            <constraint firstItem="3AV-gQ-GHB" firstAttribute="bottom" secondItem="mcw-Gu-OzQ" secondAttribute="top" id="I5B-sO-NMX"/>
                             <constraint firstItem="AuV-Db-ec1" firstAttribute="top" secondItem="PgD-Cb-oQf" secondAttribute="bottom" id="KGc-Vc-C8g"/>
+                            <constraint firstItem="3AV-gQ-GHB" firstAttribute="top" secondItem="AuV-Db-ec1" secondAttribute="bottom" constant="8" symbolic="YES" id="W0e-Z5-4lp"/>
+                            <constraint firstItem="3AV-gQ-GHB" firstAttribute="leading" secondItem="2Vd-JC-Vpf" secondAttribute="leadingMargin" constant="-10" id="YMy-5Q-3y0"/>
                             <constraint firstItem="AuV-Db-ec1" firstAttribute="leading" secondItem="2Vd-JC-Vpf" secondAttribute="leading" id="aHX-58-1ue"/>
                             <constraint firstAttribute="trailing" secondItem="AuV-Db-ec1" secondAttribute="trailing" id="hgy-zT-jh8"/>
                             <constraint firstItem="mcw-Gu-OzQ" firstAttribute="bottom" secondItem="7QW-J0-wc5" secondAttribute="top" id="hiF-tk-mjZ"/>
@@ -1031,6 +1052,7 @@
                     <navigationItem key="navigationItem" title="Calendar" id="w4h-fJ-jWW"/>
                     <connections>
                         <outlet property="calendar" destination="AuV-Db-ec1" id="VPs-Cr-J74"/>
+                        <outlet property="calendarDetailTable" destination="3AV-gQ-GHB" id="D0O-bu-8q7"/>
                         <outlet property="menuButton" destination="2qh-11-TQd" id="CJc-VG-awg"/>
                     </connections>
                 </viewController>
