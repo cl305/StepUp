@@ -37,7 +37,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.23137254901960785" green="0.32941176470588235" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="Yl9-Av-Wds">
+                            <rect key="frame" x="0.0" y="352" width="600" height="250"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.23921568627450981" green="0.3411764705882353" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
                         <sections>
                             <tableViewSection id="vd9-80-qsJ">
                                 <cells>
@@ -51,6 +56,10 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StepUpHeader" translatesAutoresizingMaskIntoConstraints="NO" id="PNr-Ym-vTo">
                                                     <rect key="frame" x="0.0" y="-7" width="293" height="58"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6oS-Jz-wyv">
+                                                    <rect key="frame" x="285" y="0.0" width="315" height="44"/>
+                                                    <color key="backgroundColor" red="0.85882352941176465" green="0.8901960784313725" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,6 +134,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.98479340255512804" green="0.988595051916346" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.96932544335269155" green="0.97306738094383793" blue="0.98429319371727753" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="sbO-o5-u6a" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="XH1-AX-OGI"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yMO-av-hV6">
                                         <rect key="frame" x="0.0" y="176" width="600" height="44"/>
@@ -913,6 +925,65 @@
             </objects>
             <point key="canvasLocation" x="1854" y="3415"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xxd-Of-69z">
+            <objects>
+                <navigationController id="sbO-o5-u6a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uh9-N1-2dx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ML0-Ja-rUl" kind="relationship" relationship="rootViewController" id="yib-xq-I9f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xop-pC-wy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840" y="4145"/>
+        </scene>
+        <!--Record a CO Reading-->
+        <scene sceneID="z1f-73-hFt">
+            <objects>
+                <viewController id="ML0-Ja-rUl" customClass="RecordCOViewController" customModule="StepUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="As7-cF-RQn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xw6-Yt-PRS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bde-rc-IeZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya6-MH-j1l">
+                                <rect key="frame" x="203" y="98" width="194" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="eRB-zH-GUk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
+                                <state key="normal" title="Tap here to record a reading"/>
+                                <connections>
+                                    <action selector="recordCOReading:" destination="ML0-Ja-rUl" eventType="touchUpInside" id="gBE-Vr-0Gx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ya6-MH-j1l" firstAttribute="top" secondItem="As7-cF-RQn" secondAttribute="bottom" constant="34" id="04g-q2-afq"/>
+                            <constraint firstItem="Xw6-Yt-PRS" firstAttribute="top" secondItem="ya6-MH-j1l" secondAttribute="bottom" constant="472" id="85t-wz-MvE"/>
+                            <constraint firstItem="ya6-MH-j1l" firstAttribute="centerX" secondItem="Bde-rc-IeZ" secondAttribute="centerX" id="TQo-bm-WqH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Record a CO Reading" id="Y3g-zk-rHg">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="organize" id="8iB-0h-EVU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="8iB-0h-EVU" id="fL9-Zd-Qtc"/>
+                        <outlet property="recordButton" destination="ya6-MH-j1l" id="M5d-ki-NmO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICf-m3-Qpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2659" y="4145"/>
+        </scene>
         <!--Title-->
         <scene sceneID="6uA-RE-DZE">
             <objects>
@@ -1006,13 +1077,6 @@
                                     <barButtonItem systemItem="organize" id="2qh-11-TQd"/>
                                 </items>
                             </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuV-Db-ec1" customClass="CalendarView" customModule="CalendarView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="239"/>
-                                <color key="backgroundColor" red="0.6705882352941176" green="0.72156862745098038" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="239" id="hTZ-ou-K3F"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-gQ-GHB">
                                 <rect key="frame" x="0.0" y="311" width="600" height="245"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1030,6 +1094,13 @@
                                     <outlet property="dataSource" destination="t7n-0v-Zm8" id="xSI-sc-OsV"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuV-Db-ec1" customClass="CalendarView" customModule="CalendarView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="239"/>
+                                <color key="backgroundColor" red="0.50273759499682102" green="0.58682393562184254" blue="0.86418232214351698" alpha="0.11347517730496454" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="239" id="hTZ-ou-K3F"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.52156862745098043" green="0.59999999999999998" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

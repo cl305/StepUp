@@ -12,6 +12,7 @@ import UIKit
 class DashboardViewController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.navigationController!.navigationBar.barTintColor = UIColor(red:75/255, green:114/255, blue:13/255, alpha:1.0)

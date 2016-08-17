@@ -20,11 +20,7 @@ class MMViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AvenirNext-Regular", size: 20)!]
-        
-        if CFloat(UIDevice.currentDevice().systemVersion)! >= 7 {
-            tableView.contentInset = UIEdgeInsetsMake(-40, 0, 0, 0)
-        }
-
+        tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
