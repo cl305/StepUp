@@ -113,6 +113,14 @@
 			name = "Motivational Messages";
 			sourceTree = "<group>";
 		};
+		632DAA751D6603170017379D /* Record CO Reading */ = {
+			isa = PBXGroup;
+			children = (
+				632DAA721D64C4E30017379D /* RecordCOViewController.swift */,
+			);
+			name = "Record CO Reading";
+			sourceTree = "<group>";
+		};
 		634B5A6A1D5A5AF4001A5813 /* Today's Goals */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +176,7 @@
 				63EF3DD31D429F2400CCF847 /* ViewController.swift */,
 				63F4BE341D524EB700627899 /* DashboardViewController.swift */,
 				63EF3DD51D429F2400CCF847 /* Main.storyboard */,
-				632DAA721D64C4E30017379D /* RecordCOViewController.swift */,
+				632DAA751D6603170017379D /* Record CO Reading */,
 				639B75C41D5E4A1C00AA3A60 /* Statistics */,
 				634B5A6A1D5A5AF4001A5813 /* Today's Goals */,
 				6313CB4C1D552FB000D79E29 /* Motivational Messages */,
