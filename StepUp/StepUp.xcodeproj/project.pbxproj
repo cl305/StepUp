@@ -13,13 +13,13 @@
 		6313CB501D58D30800D79E29 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313CB4F1D58D30800D79E29 /* KDCircularProgress.swift */; };
 		631D8FE41D5387B8001376B3 /* AddMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D8FE31D5387B8001376B3 /* AddMessageViewController.swift */; };
 		632DAA731D64C4E30017379D /* RecordCOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632DAA721D64C4E30017379D /* RecordCOViewController.swift */; };
+		632DAA741D65FB7D0017379D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EF3DDB1D429F2400CCF847 /* Assets.xcassets */; };
 		634B5A691D5A4F9E001A5813 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B5A681D5A4F9E001A5813 /* CalendarViewController.swift */; };
 		634B5A711D5BAF02001A5813 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634B5A701D5BAF02001A5813 /* StatisticsViewController.swift */; };
 		63EF3DD21D429F2400CCF847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD11D429F2400CCF847 /* AppDelegate.swift */; };
 		63EF3DD41D429F2400CCF847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD31D429F2400CCF847 /* ViewController.swift */; };
 		63EF3DD71D429F2400CCF847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EF3DD51D429F2400CCF847 /* Main.storyboard */; };
 		63EF3DDA1D429F2400CCF847 /* StepUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DD81D429F2400CCF847 /* StepUp.xcdatamodeld */; };
-		63EF3DDC1D429F2400CCF847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EF3DDB1D429F2400CCF847 /* Assets.xcassets */; };
 		63EF3DDF1D429F2400CCF847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EF3DDD1D429F2400CCF847 /* LaunchScreen.storyboard */; };
 		63EF3DEA1D429F2400CCF847 /* StepUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DE91D429F2400CCF847 /* StepUpTests.swift */; };
 		63EF3DF51D429F2400CCF847 /* StepUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF3DF41D429F2400CCF847 /* StepUpUITests.swift */; };
@@ -335,8 +335,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632DAA741D65FB7D0017379D /* Assets.xcassets in Resources */,
 				63EF3DDF1D429F2400CCF847 /* LaunchScreen.storyboard in Resources */,
-				63EF3DDC1D429F2400CCF847 /* Assets.xcassets in Resources */,
 				63EF3DD71D429F2400CCF847 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
