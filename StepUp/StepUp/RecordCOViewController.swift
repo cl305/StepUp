@@ -40,7 +40,6 @@ class RecordCOViewController: UIViewController {
                 presentViewController(imagePicker, animated: true, completion: {})
             }
         }
-        
     }
     
     

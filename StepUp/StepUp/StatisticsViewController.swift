@@ -81,8 +81,8 @@ class StatisticsViewController: UIViewController, UIPickerViewDelegate, UIPicker
         chartView.descriptionText = ""
         chartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .EaseInBounce)
         chartView.xAxis.labelPosition = .Bottom
-        
-        
+        var legend = chartView.legend
+        legend.enabled = false
         
         //Chart data
         var dataEntries: [ChartDataEntry] = []

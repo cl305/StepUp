@@ -56,7 +56,7 @@ extension CalendarViewController: CalendarViewDelegate {
     
     func calendarDidSelectDate(date: Moment) {
         self.date = date
-//        print("hey")
+        print("hey")
     }
     
     func calendarDidPageToDate(date: Moment) {
